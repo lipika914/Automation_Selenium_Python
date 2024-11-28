@@ -1,7 +1,3 @@
-Here's a detailed **README.md** file for your GitHub repository based on the conditions provided:
-
----
-
 # Selenium-Based Data-Driven Testing with Python
 
 This repository demonstrates two approaches to **data-driven testing** using **Selenium** and **Python**. It includes examples of testing with both hardcoded data and external JSON files to suit various scenarios.
@@ -9,12 +5,12 @@ This repository demonstrates two approaches to **data-driven testing** using **S
 ## Project Structure
 The repository contains the following files:
 
-1. **`test_hardcoded.py`**:  
+1. **`ddt_hard_code.py`**:  
    A basic Selenium test script with hardcoded data.  
    - Suitable for simple, static test cases.  
    - Demonstrates browser automation, element interactions, and result validation.  
 
-2. **`test_with_json.py`**:  
+2. **`ddt_json_data.py`**:  
    A dynamic Selenium test script driven by JSON data.  
    - Separates test data from the logic for better maintainability and scalability.  
    - Reads structured data from a JSON file to execute multiple test cases.  
@@ -24,7 +20,7 @@ The repository contains the following files:
 ## Tools and Technologies
 - **Python**: The primary language for writing test scripts.
 - **Selenium**: A powerful tool for browser automation and web testing.
-- **JSON**: Used as a data format for dynamic test case input in `test_with_json.py`.
+- **JSON**: Used as a data format for dynamic test case input in `ddt_json_data.py`.
 
 ---
 
@@ -42,15 +38,11 @@ The repository contains the following files:
    ```
 
 3. **Download a WebDriver**:  
-   Download the WebDriver (e.g., ChromeDriver, GeckoDriver) for your preferred browser and ensure it's in your PATH.  
-   [Download ChromeDriver](https://chromedriver.chromium.org/downloads)
+   Download the WebDriver (e.g., ChromeDriver) for preferred browser.  
+ 
 
 4. **Clone the Repository**:  
-   Clone this repository to your local machine:  
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
-   ```
+  git clone <repository-url>  
 
 ---
 
@@ -60,22 +52,22 @@ The repository contains the following files:
 This script uses hardcoded data for testing.  
 Execute the script using Python:
 ```bash
-python test_hardcoded.py
+python ddt_hard_code.py
 ```
 
 #### **2. Run `test_with_json.py`:**
 This script uses external JSON files for dynamic test input.  
-Ensure you have a JSON file (e.g., `test_data.json`) in the same directory as the script. An example `test_data.json` format:
+Ensure you have a JSON file (e.g., `dataset.json`) in the same directory as the script. An example `dataset.json` format:
 ```json
 [
-    {"username": "user1", "password": "pass1"},
-    {"username": "user2", "password": "pass2"}
+   {"username": "rahulshettyacademy", "password": "learning", "should_succeed": true},
+    {"username": "invalidUser", "password": "invalidPass", "should_succeed": false}
 ]
 ```
 
 Run the script:
 ```bash
-python test_with_json.py
+python ddt_json_data.py
 ```
 
 ---
@@ -87,24 +79,5 @@ python test_with_json.py
 
 ---
 
-## Future Enhancements
-1. Support for additional data formats such as CSV and YAML.
-2. Integration with `pytest` for structured test organization and reporting.
-3. Error handling for JSON parsing and Selenium failures.
-4. Incorporating advanced Selenium features like waits, frames, and multi-window handling.
 
----
 
-## Contributing
-Contributions are welcome! Feel free to:
-- Report issues.
-- Submit pull requests to enhance functionality or documentation.
-
----
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-This **README.md** file provides a comprehensive overview of the project, its functionality, and how to get started. You can adapt the content as necessary for your repository.
