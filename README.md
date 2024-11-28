@@ -48,14 +48,14 @@ The repository contains the following files:
 
 ### Running the Scripts
 
-#### **1. Run `test_hardcoded.py`:**
+#### **1. Run `ddt_hard_code.py`:**
 This script uses hardcoded data for testing.  
 Execute the script using Python:
 ```bash
 python ddt_hard_code.py
 ```
 
-#### **2. Run `test_with_json.py`:**
+#### **2. Run `ddt_json_data.py`:**
 This script uses external JSON files for dynamic test input.  
 Ensure you have a JSON file (e.g., `dataset.json`) in the same directory as the script. An example `dataset.json` format:
 ```json
